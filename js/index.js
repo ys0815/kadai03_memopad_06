@@ -1,5 +1,5 @@
 const memoForm = document.getElementById("memo-form");
-const movieTittle = document.getElementById("movie-tittle");
+const movieTitle = document.getElementById("movie-title");
 const date = document.getElementById("date");
 const comment = document.getElementById("comment");
 const image = document.getElementById("image");
@@ -9,31 +9,30 @@ const memoList = document.getElementById("memo-list");
 
 /*---------------------------------
 
- aveBtnボタンをクリックした時に
- 入力された映画感想を取得する
+ aveBtnボタンをクリックした時
+ ①memo-formの内容を取得してlocalStorageに保存する
+ ②入力された映画感想をmemo-listに表示させる
+ ③画像をBase64形式に変換して表示する
+ 可能だったら★で評価するあれを作りたい
 
  ---------------------------------*/
 saveBtn.addEventListener("click", () => {
-	const tittleVal = movieTittle.value;
+	const titleVal = movieTitle.value;
 	const dateVal = date.value;
 	const commentVal = comment.value;
-	const imageVal = image.value;
+	const file = image.files[0];
 
-	//詰まったこと 一個一個localStorageを取得したら違ったみたいでした
-	localStorage.setItem("movieTittle", tittleVal);
-	localStorage.setItem("date", dateVal);
-	localStorage.setItem("comment", commentVal);
-	localStorage.setItem("image", imageVal);
-	alert("データを保存しました！");
+	const memoItem = {
+		key1: titleVal,
+		key2: dateVal,
+		key3: commentVal,
+		//どうやら画像をlocalStorageに保存するにはBase64形式に変換する必要があるらしい…
+		//まだ出来ていない
+		key4: file,
+	};
+	// 以下、localStorageに保存する
+	// 詰まったこと 一個一個localStorageを取得したら違ったみたいでした
+	// localStorage.setItem(memoItem, JSON.stringify(memoItem));
+	//と、最初に書いたけど、データが上書きされてしまった。
+	localStorage.setItem("review" + Date.now(), JSON.stringify(memoItem));
 });
-
-/*---------------------------------
-
- localStorageに保存する
-
- ---------------------------------*/
-/*---------------------------------
-
- 保存した映画感想を表示する
-
- ---------------------------------*/
