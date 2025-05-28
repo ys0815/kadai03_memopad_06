@@ -1,0 +1,106 @@
+/* --- フォーム全体のスタイル --- */
+#memo-form {
+	max-width: 500px; /* フォームの最大幅を設定 */
+	margin: 40px auto; /* 上下左右中央寄せ */
+	padding: 30px;
+	background-color: #ffffff; /* 白い背景 */
+	border-radius: 12px; /* 角を丸くする */
+	box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* 軽い影で浮き出す */
+	display: flex;
+	flex-direction: column; /* 要素を縦に並べる */
+	gap: 18px; /* 要素間の余白 */
+}
+
+/* --- 入力フィールド (input, textarea) の共通スタイル --- */
+#memo-form input[type="text"],
+#memo-form input[type="date"],
+#memo-form input[type="url"],
+#memo-form textarea {
+	width: 100%; /* 親要素の幅いっぱいに広げる */
+	padding: 12px 15px; /* 内側の余白 */
+	border: 1px solid #e0e0e0; /* 薄いグレーの枠線 */
+	border-radius: 8px; /* 角を丸くする */
+	font-size: 16px; /* フォントサイズ */
+	color: #333; /* テキストの色 */
+	transition: border-color 0.3s ease, box-shadow 0.3s ease; /* ホバー・フォーカス時のアニメーション */
+	box-sizing: border-box; /* paddingとborderを幅に含める */
+}
+
+/* プレースホルダーのスタイル */
+#memo-form input::placeholder,
+#memo-form textarea::placeholder {
+	color: #999; /* プレースホルダーの色 */
+	font-size: 15px;
+}
+
+/* 入力フィールドがフォーカスされた時のスタイル */
+#memo-form input:focus,
+#memo-form textarea:focus {
+	border-color: #007bff; /* 青い枠線 */
+	box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25); /* 軽いシャドウ */
+	outline: none; /* デフォルトのアウトラインを消す */
+}
+
+/* テキストエリアの調整 */
+#memo-form textarea {
+	resize: vertical; /* 縦方向のみリサイズ可能にする */
+	min-height: 100px; /* 最小の高さ */
+	line-height: 1.5; /* 行の高さ */
+}
+
+/* --- ボタンのスタイル --- */
+#memo-form button {
+	padding: 12px 25px;
+	border: none;
+	border-radius: 8px;
+	font-size: 18px;
+	font-weight: bold;
+	cursor: pointer;
+	transition: background-color 0.3s ease, transform 0.2s ease; /* ホバー・クリック時のアニメーション */
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* ボタンに影 */
+}
+
+/* 最初のボタン (保存) のスタイル */
+#memo-form button[type="submit"]:first-of-type {
+	background-color: #007bff; /* 青色 */
+	color: #ffffff; /* 白い文字 */
+}
+
+/* 最初のボタン (保存) がホバーされた時のスタイル */
+#memo-form button[type="submit"]:first-of-type:hover {
+	background-color: #0056b3; /* 濃い青色 */
+	transform: translateY(-2px); /* 少し上に浮き上がる */
+}
+
+/* 2番目のボタン (リセット) のスタイル */
+#memo-form button[type="submit"]:last-of-type {
+	background-color: #6c757d; /* グレー */
+	color: #ffffff; /* 白い文字 */
+}
+
+/* 2番目のボタン (リセット) がホバーされた時のスタイル */
+#memo-form button[type="submit"]:last-of-type:hover {
+	background-color: #5a6268; /* 濃いグレー */
+	transform: translateY(-2px); /* 少し上に浮き上がる */
+}
+
+/* --- その他の調整 --- */
+h1 {
+	color: #2c3e50; /* 少し濃いめの色 */
+	text-align: center;
+	margin-top: 50px;
+	margin-bottom: 20px;
+	font-size: 2.5em;
+	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); /* 影で立体感を出す */
+}
+
+body {
+	font-family: "Kosugi", sans-serif;
+	background-color: #f4f7f6; /* 全体の背景色を少し柔らかく */
+	display: flex;
+	flex-direction: column;
+	align-items: center; /* 中央寄せ */
+	min-height: 100vh; /* 画面全体を使う */
+	margin: 0;
+	padding: 20px;
+}

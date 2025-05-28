@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="stylesheet" href="./css/reset.css" />
+		<link rel="stylesheet" href="./css/style.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Kosugi&display=swap" rel="stylesheet" />
+	</head>
+	<body>
+		<h1>映画感想メモ</h1>
+
+		<form id="memo-form">
+			<input type="text" id="movie-title" placeholder="映画タイトル" required />
+			<input type="date" id="date" required />
+			<textarea id="comment" placeholder="感想" required></textarea>
+			<input type="file" name="example" accept="image/*" />
+			<button id="save-btn">保存</button>
+			<button id="reset-btn">リセット</button>
+		</form>
+		<!-- ここに映画の感想と画像を表示させる -->
+		<div id="memo-list"></div>
+		<script src="index.js"></script>
+	</body>
+</html>
