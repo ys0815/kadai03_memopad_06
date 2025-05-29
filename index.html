@@ -17,9 +17,17 @@
 			<input type="text" id="movie-title" placeholder="映画タイトル" required />
 			<input type="date" id="date" required />
 			<textarea id="comment" placeholder="感想" required></textarea>
-			<input type="file" id="image" accept="image/*" />
-			<button id="save-btn">保存</button>
-			<button id="reset-btn">リセット</button>
+			<input type="number" id="ranking" placeholder="星の数（1〜5）" min="1" max="5" />
+
+			<select id="genre">
+				<option value="SF">SF</option>
+				<option value="ホラー">ホラー</option>
+				<option value="アクション">アクション</option>
+				<option value="その他">その他</option>
+			</select>
+
+			<button type="submit" id="save-btn">保存</button>
+			<button type="reset" id="reset-btn">リセット</button>
 		</form>
 		<!-- ここに映画の感想と画像を表示させる -->
 		<div id="memo-list"></div>
