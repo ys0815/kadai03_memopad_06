@@ -8,7 +8,7 @@
 		<link rel="stylesheet" href="./css/style.css" />
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link href="https://fonts.googleapis.com/css2?family=Kosugi&display=swap" rel="stylesheet" />
+		<link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru&display=swap" rel="stylesheet" />
 	</head>
 	<body>
 		<h1>映画感想メモ</h1>
@@ -16,13 +16,29 @@
 		<form id="memo-form">
 			<input type="text" id="movie-title" placeholder="映画タイトル" required />
 			<input type="date" id="date" required />
+			<select id="how-to">
+				<option value="映画館">映画館</option>
+				<option value="試写会">試写会</option>
+				<option value="DVD/Blu-ray/VHS">DVD/Blu-ray/VHS</option>
+				<option value="動画配信サービス">動画配信サービス</option>
+				<option value="TV地上波">TV地上波</option>
+				<option value="BS/CS">BS/CS</option>
+				<option value="飛行機">飛行機</option>
+				<option value="その他">その他</option>
+				</option>
+			</select>
 			<textarea id="comment" placeholder="感想" required></textarea>
-			<input type="number" id="ranking" placeholder="星の数（1〜5）" min="1" max="5" />
+			<input type="number" id="rating" placeholder="星の数（1〜5）" min="1" max="5" />
 
 			<select id="genre">
 				<option value="SF">SF</option>
 				<option value="ホラー">ホラー</option>
 				<option value="アクション">アクション</option>
+				<option value="コメディ">コメディ</option>
+				<option value="ヒューマン">ヒューマン</option>
+				<option value="サスペンス">サスペンス</option>
+				<option value="ファンタジー">ファンタジー</option>
+				<option value="アニメ">アニメ</option>
 				<option value="その他">その他</option>
 			</select>
 
