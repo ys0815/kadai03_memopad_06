@@ -1,5 +1,8 @@
+/* --------------------------------
+  Base Styles
+-------------------------------- */
 body {
-	margin: 0px;
+	margin: 0;
 	background-color: #0c0a18;
 	color: #fff;
 	font-family: "Sawarabi Gothic", sans-serif;
@@ -12,6 +15,9 @@ h1 {
 	color: #fff;
 }
 
+/* --------------------------------
+  header
+-------------------------------- */
 .site-header {
 	text-align: center;
 }
@@ -21,16 +27,19 @@ h1 {
 	height: auto;
 	margin-bottom: 10px;
 }
-
+/* --------------------------------
+  Form
+-------------------------------- */
 form {
-	max-width: 600px;
-	margin: 0px auto 80px;
+	max-width: 800px;
+	margin: 0 auto 80px;
 	padding: 32px;
 	background-color: #1e1e2f;
 	border-radius: 12px;
 	box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
 }
 
+/* フォーム入力要素 */
 input,
 textarea,
 select {
@@ -49,9 +58,11 @@ textarea::placeholder {
 	color: #aaa;
 }
 
+/* --------------------------------
+  Button
+-------------------------------- */
 button {
 	padding: 15px 80px;
-	margin-right: 8px;
 	border: none;
 	border-radius: 8px;
 	background: linear-gradient(135deg, #ffb03a, #ff4e50, #6c5ce7);
@@ -76,17 +87,25 @@ button:hover {
 .del-btn {
 	font-size: 15px;
 	color: #0e0e1a;
-	display: flex;
-	justify-content: flex-end;
-	gap: 10px;
-	margin-top: 16px;
 	padding: 10px;
 	background: #fff;
+	border-radius: 8px;
+	border: none;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+	position: absolute;
+	bottom: 15px;
+	right: 15px;
+	padding: 8px 12px;
+	font-weight: bold;
 }
 
+/* --------------------------------
+  メモ部分
+-------------------------------- */
 #memo-list {
 	max-width: 800px;
-	margin: 0px auto;
+	margin: 0 auto;
 }
 
 #memo-list > div {
@@ -95,15 +114,20 @@ button:hover {
 	border-radius: 10px;
 	margin-bottom: 24px;
 	box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	position: relative;
 }
 
+/* メモアイテム内のテキスト */
 #memo-list h2 {
 	font-size: 24px;
 	margin-bottom: 8px;
 }
 
 #memo-list p {
-	margin: 15px 0px;
+	margin: 15px 0;
 }
 
 #memo-list .genre-tag {
@@ -116,6 +140,23 @@ button:hover {
 	margin-top: 8px;
 }
 
+/* --------------------------------
+  footer
+-------------------------------- */
+footer {
+	text-align: center;
+	margin-top: 30px;
+	color: #aaa;
+	font-size: 14px;
+	width: 100%;
+	box-sizing: border-box;
+}
+
+footer p {
+	margin: 0;
+}
+
+/* レスポンシブデザイン */
 @media (max-width: 600px) {
 	form,
 	#memo-list {

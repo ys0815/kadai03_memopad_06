@@ -3,7 +3,8 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>映画レビューサイト</title>
+		<title>MOVIE REVIEW</title>
+		<link rel="icon" href="./img/favicon.ico" sizes="32x32" />
 		<link rel="stylesheet" href="./css/reset.css" />
 		<link rel="stylesheet" href="./css/style.css" />
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -23,6 +24,7 @@
 			<input type="text" id="movie-title" placeholder="映画タイトル" required />
 			<input type="date" id="date" required />
 			<select id="how-to">
+				<option value="" selected disabled>視聴方法を選択</option>
 				<option value="映画館">映画館</option>
 				<option value="試写会">試写会</option>
 				<option value="DVD/Blu-ray/VHS">DVD/Blu-ray/VHS</option>
@@ -36,6 +38,7 @@
 			<input type="number" id="rating" placeholder="星の数（1〜5）" min="1" max="5" />
 
 			<select id="genre">
+				<option value="" selected disabled>ジャンルを選択</option>
 				<option value="SF">SF</option>
 				<option value="ホラー">ホラー</option>
 				<option value="アクション">アクション</option>
@@ -53,6 +56,7 @@
 		</form>
 		<!-- ここに映画の感想と画像を表示させる -->
 		<div id="memo-list"></div>
+		<footer>&copy;2025 MOVIE REVIEW</footer>
 		<script src="./js/index.js"></script>
 	</body>
 </html>

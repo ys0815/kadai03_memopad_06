@@ -47,7 +47,7 @@ memoForm.addEventListener("submit", (event) => {
 	displayMemos();
 });
 
-function displayMemos(reviewKey) {
+function displayMemos() {
 	// memo-listを空にする
 	memoList.innerHTML = "";
 
@@ -86,25 +86,10 @@ function displayMemos(reviewKey) {
 	//delBtnの中にあるbutton一つ一つにクリックイベントを指示している
 	document.querySelectorAll(".del-btn").forEach((button) => {
 		button.addEventListener("click", () => {
+			//55行目〜で取得したlocalStorageを削除
 			const key = button.getAttribute("data-key");
 			localStorage.removeItem(key);
 			displayMemos();
 		});
 	});
 }
-/*---------------------------------
-
-削除するボタンをクリックした時
- ①localStorageから該当のデータを削除する
- ②memo-listから該当のデータを削除する
-
----------------------------------*/
-//delBtnはclass属性なので、複数存在する。直接addEventListenerを使うと最初の一つにしか実行されないらしい
-//ここにもforEachを使って一つずつ処理をする必要があるらしい
-//delBtnの中にあるbutton一つ一つにクリックイベントを指示している
-delBtn.forEach((button) => {
-	button.addEventListener("click", () => {
-		localStorage.removeItem();
-		displayMemos();
-	});
-});
