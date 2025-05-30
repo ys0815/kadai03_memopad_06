@@ -3,15 +3,21 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Document</title>
+		<title>映画レビューサイト</title>
 		<link rel="stylesheet" href="./css/reset.css" />
 		<link rel="stylesheet" href="./css/style.css" />
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru&display=swap" rel="stylesheet" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Sawarabi+Gothic&display=swap"
+			rel="stylesheet"
+		/>
 	</head>
 	<body>
-		<h1>映画感想メモ</h1>
+		<header class="site-header">
+			<img src="./img/review-logo.png" alt="REVIEW ロゴ" class="logo" />
+		</header>
+		<!-- <h1>映画感想メモ</h1> -->
 
 		<form id="memo-form">
 			<input type="text" id="movie-title" placeholder="映画タイトル" required />
@@ -25,7 +31,6 @@
 				<option value="BS/CS">BS/CS</option>
 				<option value="飛行機">飛行機</option>
 				<option value="その他">その他</option>
-				</option>
 			</select>
 			<textarea id="comment" placeholder="感想" required></textarea>
 			<input type="number" id="rating" placeholder="星の数（1〜5）" min="1" max="5" />
@@ -42,8 +47,9 @@
 				<option value="その他">その他</option>
 			</select>
 
-			<button type="submit" id="save-btn">保存</button>
-			<button type="reset" id="reset-btn">リセット</button>
+			<div class="form-buttons">
+				<button type="submit" id="save-btn">保存</button>
+			</div>
 		</form>
 		<!-- ここに映画の感想と画像を表示させる -->
 		<div id="memo-list"></div>
