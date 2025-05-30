@@ -31,7 +31,7 @@ h1 {
   Form
 -------------------------------- */
 form {
-	max-width: 800px;
+	max-width: 700px;
 	margin: 0 auto 80px;
 	padding: 32px;
 	background-color: #1e1e2f;
@@ -94,8 +94,8 @@ button:hover {
 	cursor: pointer;
 	transition: background-color 0.3s ease;
 	position: absolute;
-	bottom: 15px;
-	right: 15px;
+	bottom: 25px;
+	right: 25px;
 	padding: 8px 12px;
 	font-weight: bold;
 }
@@ -104,13 +104,13 @@ button:hover {
   メモ部分
 -------------------------------- */
 #memo-list {
-	max-width: 800px;
+	max-width: 700px;
 	margin: 0 auto;
 }
 
 #memo-list > div {
 	background-color: #1b1b2b;
-	padding: 24px;
+	padding: 25px;
 	border-radius: 10px;
 	margin-bottom: 24px;
 	box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
@@ -157,7 +157,7 @@ footer p {
 }
 
 /* レスポンシブデザイン */
-@media (max-width: 600px) {
+@media screen and (max-width: 768px) {
 	form,
 	#memo-list {
 		padding: 16px;
